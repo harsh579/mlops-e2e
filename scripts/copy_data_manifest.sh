@@ -6,7 +6,10 @@ set -e
 
 echo "Data Manifest:"
 echo $CODEBUILD_SRC_DIR_SourceDataOutput
-echo $${CODEBUILD_SRC_DIR_SourceDataOutput}/manifest.json
+pwd
+ls
+echo "+++++++++"
+ls $CODEBUILD_SRC_DIR_SourceDataOutput
 cat ${CODEBUILD_SRC_DIR_SourceDataOutput}/manifest.json
 
 echo "Copying Data Manifest to main folder"
