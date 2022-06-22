@@ -19,6 +19,12 @@ pip install sagemaker==2.88.2
 
 echo "Starting Pipeline Execution"
 export PYTHONUNBUFFERED=TRUE
+echo $PYTHONUNBUFFERED
+echo $SAGEMAKER_PIPELINE_ROLE_ARN
+echo $SAGEMAKER_PROJECT_NAME
+echo $AWS_REGION
+echo $SAGEMAKER_ARTIFACT_BUCKET
+echo "[{\"Key\":\"sagemaker:project-name\", \"Value\":\"${SAGEMAKER_PROJECT_NAME}\"}]"
 python run_pipeline.py --module-name pipeline \
         --role-arn $SAGEMAKER_PIPELINE_ROLE_ARN \
         --tags "[{\"Key\":\"sagemaker:project-name\", \"Value\":\"${SAGEMAKER_PROJECT_NAME}\"}]" \
