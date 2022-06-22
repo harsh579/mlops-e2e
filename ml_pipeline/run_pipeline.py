@@ -14,6 +14,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                                                                              *
 
 """A CLI to create or update and run pipelines."""
+print("run pipeline started")
 from __future__ import absolute_import
 
 import argparse
@@ -73,6 +74,7 @@ def main():  # pragma: no cover
         help="""List of dict strings of '[{"Key": "string", "Value": "string"}, ..]'""",
     )
     args = parser.parse_args()
+    print("argssssss", args)
 
     if args.module_name is None or args.role_arn is None:
         parser.print_help()
