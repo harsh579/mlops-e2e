@@ -14,7 +14,6 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                                                                              *
 
 """A CLI to create or update and run pipelines."""
-print("run pipeline started")
 from __future__ import absolute_import
 
 import argparse
@@ -22,6 +21,7 @@ import json
 import sys
 
 from _utils import get_pipeline_driver, convert_struct
+print("run pipeline started")
 
 def get_model_package_name(pipeline_steps):
     for step in pipeline_steps:
